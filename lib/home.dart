@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gpa/constants/companets.dart';
-import 'package:gpa/modules/gpacal.dart';
+import 'package:gpa/modules/cumNumber.dart';
 
-import 'modules/gpa_layout.dart';
+import 'modules/semeterNumber.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -19,12 +19,12 @@ class Home extends StatelessWidget {
           children: [
             defaultButton(function: (){
 
-              Navigator.push(context, MaterialPageRoute(builder: (context) => GpaTotal()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => CumNumber()));
             }, text: 'اذهب للحساب المعدل التراكمي'),
             SizedBox(height: 20),
             defaultButton(function:  (){
 
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Gpa()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => SemeterNumber()));
             } , text: ' اذهب للحساب المعدل الفصلي')
           ],
         ),

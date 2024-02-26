@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Result extends StatelessWidget {
-  Result({required this.total,Key? key}) : super(key: key);
+class CumTotal extends StatelessWidget {
+  CumTotal({required this.total,Key? key}) : super(key: key);
   var total;
 
 
@@ -14,10 +14,14 @@ class Result extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('معدلك التراكمي هو :',style: TextStyle(
-                fontSize: 18
+                fontSize: 30,
+              fontWeight: FontWeight.bold
             ),),
             SizedBox(height: 8,),
-            Text('${total.toStringAsFixed(2)}'),
+            Text('${total.toStringAsFixed(2)}',style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold
+            ),),
           ],
         ),
       ),

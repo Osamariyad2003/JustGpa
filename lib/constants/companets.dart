@@ -43,7 +43,6 @@ Widget defaultFormTextGpa({required String label
 
 Widget defaultButton({
   double width = double.infinity,
-  Color background =  Colors.indigo,
   bool isUpperCase = true,
   double radius = 8.0,
   required  function,
@@ -65,7 +64,7 @@ Widget defaultButton({
         borderRadius: BorderRadius.circular(
           radius,
         ),
-        color: background,
+        color: Colors.indigo.shade900,
       ),
     );
 

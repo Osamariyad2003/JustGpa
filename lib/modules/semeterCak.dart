@@ -5,8 +5,6 @@ import 'package:gpa/modules/total.dart';
 
 class Go_Cal extends StatefulWidget {
   final int rowCount;
-
-
   Go_Cal({
     required this.rowCount,
     Key? key,
@@ -28,7 +26,6 @@ class _Go_CalState extends State<Go_Cal> {
     for (int i = 0; i < widget.rowCount; i++) {
       gpaControllers.add(TextEditingController());
       hoursControllers.add(TextEditingController());
-
     }
   }
 

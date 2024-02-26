@@ -14,10 +14,14 @@ class Total extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('معدلك الفصلي هو :',style: TextStyle(
-              fontSize: 18
+              fontSize: 30,
+              fontWeight: FontWeight.bold
             ),),
             SizedBox(height: 8,),
-            Text('${total.toStringAsFixed(2)}'),
+            Text('${total.toStringAsFixed(2)}',style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold
+            ),),
           ],
         ),
       ),

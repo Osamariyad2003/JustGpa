@@ -32,7 +32,7 @@ class _SplashState extends State<Splash> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Just Gpa ',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
+              Text('JUST GPA ',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),),
               SizedBox(height: 20,),
               CircularProgressIndicator(color: Colors.white,)
             ],

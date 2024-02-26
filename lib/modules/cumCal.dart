@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:gpa/constants/companets.dart';
-import 'package:gpa/modules/result.dart';
+import 'package:gpa/modules/CumTotal.dart';
 import 'package:gpa/modules/total.dart';
 
-class GpaTotal2 extends StatefulWidget {
+class CumCal extends StatefulWidget {
   final int rowCount;
 
 
-  GpaTotal2({
+  CumCal({
     required this.rowCount,
     Key? key,
   }) : super(key: key);
 
   @override
-  _GpaTotal2State createState() => _GpaTotal2State();
+  _CumCalState createState() => _CumCalState();
 }
 
-class _GpaTotal2State extends State<GpaTotal2> {
+class _CumCalState extends State<CumCal> {
   late String selectedvalue =gpaMap.keys.first;
   double gpaintial = 0;
   double gpafinal = 0;
@@ -27,21 +27,15 @@ class _GpaTotal2State extends State<GpaTotal2> {
   var totalgpacontroller =TextEditingController();
   var totalhourscontroller =TextEditingController();
   List<String> options = ['A+','A','A-','B+','B','B-','C+','C','C-','D+','D','D-','F'];
-
   Map<String,double> option = {'A+': 4.2,'A':4.0,'A-':3.75,'B+':3.5,'B':3.25,'B-':3.0,'C+':2.75,'C':2.5,'C-':2.25,'D+':2,'D':1.75,'D-':1.5,'F':0.5};
-
-
-
   @override
   void initState() {
     super.initState();
     for (int i = 0; i < widget.rowCount; i++) {
       gpaControllers.add(TextEditingController());
       hoursControllers.add(TextEditingController());
-
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,7 +85,7 @@ class _GpaTotal2State extends State<GpaTotal2> {
               SingleChildScrollView(
                 child: defaultButton(function: (){
                   var total= calculateGPA();
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Result(total: total,)));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => CumTotal(total: total,)));
                 }, text: 'حساب '),
               ),
 
